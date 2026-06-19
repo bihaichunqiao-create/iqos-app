@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IQOS Premium Product Showcase</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/favicon.ico">
+</head>
+
+<body>
+
+    <header>
+        <h1>IQOS FLAVOR</h1>
+        <button id="menuBtn" class="hamburger">☰</button>
+    </header>
+
+    <!-- メインビジュアル -->
+    <section class="hero">
+        <h2>納税を、その手に。</h2>
+        <p>先を見据える力と、妥協なき支出の融合。</p>
+    </section>
+
+    <!-- 商品一覧表示エリア -->
+    <main class="product-container">
+        <p style="text-align: center; color: #8e8e93; width: 100%;">加熱中...</p>
+    </main>
+
+    <script src="/app.js"></script>
+
+    <div id="overlay"></div>
+
+    <!-- ハンバーガーメニュー -->
+    <aside id="sideMenu">
+
+        <div class="menu-header">
+            <h3>SELECT</h3>
+            <button id="closeBtn">✕</button>
+        </div>
+
+        <form id="searchForm">
+
+            <label>フレーバータイプ</label>
+            <!-- <select name="flavorType">
+                <option value="">指定なし</option>
+                <option value="メンソール">MENTHOL</option>
+                <option value="レギュラー">REGULAR</option>
+                <option value="フレーバー">PEARL</option>
+            </select> -->
+            <div id="flavorFilter">
+                <button type="button" data-value="メンソール">MENTHOL</button>
+                <button type="button" data-value="レギュラー">REGULAR</button>
+                <button type="button" data-value="フレーバー">PEARL</button>
+            </div>
+
+            <input type="hidden" name="flavorType" id="flavorInput">
+
+            <label>清涼感の強さ</label>
+            <!-- <select name="strength">
+                <option value="">指定なし</option>
+                <option value="0">☆☆☆☆☆</option>
+                <option value="1">★☆☆☆☆</option>
+                <option value="2">★★☆☆☆</option>
+                <option value="3">★★★☆☆</option>
+                <option value="4">★★★★☆</option>
+                <option value="5">★★★★★</option>
+            </select> -->
+            <div id="starFilter">
+                <span data-value="1">☆</span>
+                <span data-value="2">☆</span>
+                <span data-value="3">☆</span>
+                <span data-value="4">☆</span>
+                <span data-value="5">☆</span>
+            </div>
+            <input type="hidden" name="strength" id="strengthInput">
+
+            <div class="search-buttons">
+                
+                <button type="button" id="resetBtn">
+                    リセット
+                </button>
+
+                <button type="submit">
+                    検索
+                </button>
+            </div>
+
+            <img src="/images/iqos_logo.jpg" alt="IQOS">
+
+        </form>
+
+    </aside>
+</body>
+
+</html>
