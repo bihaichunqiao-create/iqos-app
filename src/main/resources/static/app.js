@@ -281,5 +281,33 @@ document.addEventListener("DOMContentLoaded", () => {
             btn.classList.toggle("active", btn.dataset.value === value);
         });
     }
+    const ageVerified =
+        sessionStorage.getItem("ageVerified");
+
+    const gate =
+        document.getElementById("ageGate");
+
+    if (ageVerified === "true") {
+        gate.style.display = "none";
+    }
+
+    document
+        .getElementById("confirmAge")
+        ?.addEventListener("click", () => {
+
+            sessionStorage.setItem(
+                "ageVerified",
+                "true"
+            );
+
+            gate.style.display = "none";
+        });
+
+    document
+        .getElementById("rejectAge")
+        ?.addEventListener("click", () => {
+
+            location.href = "https://www.iqos.com";
+        });
 
 });
