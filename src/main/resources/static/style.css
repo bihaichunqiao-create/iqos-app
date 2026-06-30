@@ -88,7 +88,6 @@ header h1 {
 }
 
 .product-card:hover {
-    transform: translateY(-5px);
     border-color: rgba(229, 193, 88, 0.4);
 }
 
